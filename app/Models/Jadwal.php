@@ -15,7 +15,7 @@ class Jadwal extends Model
         'jam_selesai',
         'guru_id',
         'kelas_id',
-        'mata_pelajaran', // kalau tabel kamu punya kolom ini
+        'mata_pelajaran',
     ];
 
     public function guru()

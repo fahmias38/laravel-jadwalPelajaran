@@ -48,3 +48,4 @@ class JadwalResource extends Resource
         ];
     }
 }
+

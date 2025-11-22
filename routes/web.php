@@ -3,6 +3,11 @@
 use App\Models\Kelas;
 use App\Models\Jadwal;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicJadwalController;
+
+Route::get('/jadwal', [PublicJadwalController::class, 'index']);
+Route::post('/jadwal', [PublicJadwalController::class, 'search'])->name('jadwal.search');
+
 
 // Halaman default Laravel
 Route::get('/', function () {
@@ -23,7 +28,7 @@ Route::get('/jadwal', function () {
             ->get();
     }
 
-    return view('public.jadwal', [
+    return view('jadwal', [
         'kelas'    => $kelas,
         'selected' => $selected,
         'jadwal'   => $jadwal,
